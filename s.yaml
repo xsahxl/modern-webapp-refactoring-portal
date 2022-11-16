@@ -9,10 +9,10 @@ vars:
 services:
   portal-www: # 静态资源
     component: oss
-    actions:
-      pre-deploy:
-        - run: npm i --registry=https://registry.npmmirror.com && npm run generate
-          path: ./web
+    # actions:
+    #   pre-deploy:
+    #     - run: npm i --registry=https://registry.npmmirror.com && npm run generate
+    #       path: ./web
     props:
       region: ${vars.region}
       bucket: ${vars.oss.bucketName} # OSS bucket 自动生成
