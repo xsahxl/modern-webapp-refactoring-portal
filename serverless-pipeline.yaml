@@ -12,5 +12,5 @@ env:
   age: 2
 steps:
   - run: npm i @serverless-devs/s -g --registry=https://registry.npmmirror.com
-  - run: s -v
-  - run: s deploy
+  - run: s config add --AccountID ${{secrets.account}}  --AccessKeyID ${{secrets.ak}}  --AccessKeySecret ${{secrets.sk}} -a default -f
+  - run: s deploy --use-local -y
