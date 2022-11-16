@@ -4,14 +4,14 @@ access: default
 vars:
   region: cn-hangzhou
   oss:
-    bucketName: 'hanxie-modernweb-registery'
-    bucketObject: 'portal'
+    bucketName: hanxie-modernweb-registery
+    bucketObject: portal
 services:
   portal-www: # 静态资源
     component: oss
     actions:
       pre-deploy:
-        - run: npm i --registry=https://registry.npmmirror.com && npm run generate
+        - run: npm i && npm run generate
           path: ./web
     props:
       region: ${vars.region}
