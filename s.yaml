@@ -11,7 +11,7 @@ services:
     component: oss
     actions:
       pre-deploy:
-        - run: npm i && npm run generate
+        - run: npm i --registry=https://registry.npmmirror.com && npm run generate
           path: ./web
     props:
       region: ${vars.region}
