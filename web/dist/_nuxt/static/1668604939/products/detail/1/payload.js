@@ -1,1 +1,0 @@
-__NUXT_JSONP__("products/detail/1", {data:[{}],fetch:{"0":{_error:{message:"Cannot read properties of undefined (reading 'replace')",statusCode:500}}},mutations:[]});
