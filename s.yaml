@@ -2,10 +2,10 @@ edition: 1.0.0
 name: modern-app-new
 access: default
 vars:
-  region: cn-hangzhou
+  region: cn-chengdu
   oss:
-    bucketName: 'hanxie-modernweb-registery'
-    bucketObject2: 'portal'
+    bucketName: "shl-test"
+    bucketObject2: "portal"
 services:
   portal-www: # 静态资源
     component: oss
