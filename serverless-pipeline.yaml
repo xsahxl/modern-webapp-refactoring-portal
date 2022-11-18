@@ -5,7 +5,7 @@ env:
 steps:
   - run: npm i @serverless-devs/s -g
   - run: s config add --AccountID ${{secrets.account}}  --AccessKeyID ${{secrets.ak}}  --AccessKeySecret ${{secrets.sk}} -a default -f
-  - run: npm i
+  - run: npm install --registry=https://registry.npmmirror.com
     working-directory: ./web
   - run: npm run generate
     working-directory: ./web
